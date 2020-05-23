@@ -4,6 +4,16 @@
 #   agency wants to analyze the data to research on the healthcare costs and their
 #   utilization
 
+# Here is a detailed description of the variables in the dataset:
+
+# AGE : Age of the patient discharged
+# FEMALE : Binary variable that indicates if the patient is female
+# LOS : Length of stay, in days
+# RACE : Race of the patient (specified numerically)
+# TOTCHG : Hospital discharge costs
+# APRDRG : All Patient Refined Diagnosis Related Groups
+
+
 #*****************************************************************************************
 #                           Loading Data                                                 #
 #*****************************************************************************************
@@ -47,9 +57,10 @@ colSums(is.na(healthcare_costs))
 
 
 breaks <- c(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17)
-tags <- c('0-1','1-2','2-3','3-4','4-5','5-6','6-7','7-8','8-9','9-10','10-11','11-12',
-          '12-13','13-14','14-15','15-16','16-17')
-
+tags <- c('Group: 0-1','Group: 1-2','Group: 2-3','Group: 3-4','Group: 4-5','Group: 5-6',
+          'Group: 6-7','Group: 7-8','Group: 8-9','Group: 9-10','Group: 10-11','Group: 11-12',
+          'Group: 12-13','Group: 13-14','Group: 14-15','Group: 15-16','Group: 16-17')
+g
 group_tags <- cut(healthcare_costs$AGE,breaks = breaks,include.lowest = TRUE,right = FALSE,
                   labels = tags)
 summary(group_tags)
