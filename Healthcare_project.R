@@ -48,7 +48,7 @@ colSums(is.na(healthcare_costs))
 
 #********************************************************************************************
 #  To record the patient statistics, the agency wants to find the age                       *
-#  category of people who frequents the hospital and has the maximum expenditure.           *
+#  category of people who frequent the hospital and have the maximum expenditure.           *
 # we need find the age category that has the highest frequency of hospital visits,          *
 # we can visualise the frequency using a histogram                                          *
 #********************************************************************************************
@@ -78,7 +78,7 @@ hist(healthcare_costs$AGE,
 # The summary shows that  we have  307 hospital visits for people in the age range 0-1 years
 
 
-#2.To find the Age category with the Maximum Expenditure 
+#2.To find the Age category with the maximum Expenditure 
 
 #We first need to find the sum of expendicture for each age group and then find the maximum sum
 #to compute the summary for the data subset we can use the function aggregare
